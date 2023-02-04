@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(220, 220, 220);
+}
+
+.header {
+    height: 50px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #eee
+}
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 20px auto 0 auto;
+    background-color: #eee
+}
+
+.form {
+    background: rgb(158, 156, 156);
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    display: flex;  
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+    gap:20px;
+
+}
+
+.input {
+    border: 0;
+    padding: 10px;
+    width:500px;
+    
+}
+
+.button,
+.clear {
+
+    background: rgb(113, 112, 112);
+    border: none;
+    padding: 10px;
+}
+
+.messages {
+    height: 100vh;
+}
+
+li {
+    margin: 0 0 5px 5px;
+    list-style-type: none;
+}
+
+li:nth-child(odd) {
+    background: #eee;
+}
+
+.user-name {
+    font-size: 11px;
+    color: blue;
+}
+
+.user-name:hover {
+    cursor: pointer;
+}
