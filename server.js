@@ -6,7 +6,7 @@ let thisMessage
 
 const express = require('express')
 const app = express();
-const path=require('path')
+const path = require('path')
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 
@@ -15,11 +15,14 @@ app.use(express.urlencoded({
     extended: false
 }))
 
-
+app.use((req, res, next) => {
+    console.log(req.url)
+    next()
+})
 
 // middleware for handing json data
 app.use(express.json())
-app.use('/', express.static(path.join(__dirname, '/public')))
+app.use(express.static(path.join(__dirname, '/public')))
 
 // this is for historical messages
 const messages = [{
